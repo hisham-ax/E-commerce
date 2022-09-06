@@ -6,13 +6,50 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-header {
-  background-color: #404040;
+.h5 {
+  font-size: 1.22rem;
+}
+.site-container {
+  min-height: 100vh;
+}
+.navbar-brand {
+  cursor: pointer;
+}
+main {
+  flex: 1;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.btn-primary {
+  background-color: #f0c040;
+  color: #000;
+}
+.rating span {
+  color: #ffc000;
+}
+.product {
+  border: 1px solid #404040;
+  margin: 1rem;
+}
+.product img {
+  width: 100%;
+  max-width: 200px;
+}
+.product-info {
   padding: 1rem;
 }
-header a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
+.img-large {
+  max-width: 100%;
+}
+.img-thumbnail {
+  height: 80px;
+}
+.f-size {
+  font-size: 0.9rem;
+}
+.small-container {
+  max-width: 600px;
 }

@@ -14,6 +14,7 @@ function CartScreen() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const {
     cart: { cartItems },
+    userInfo,
   } = state;
   const updateCartHandler = async (item, quantity) => {
     const { data } = await axios.get(`/api/products/${item._id}`);
@@ -77,7 +78,7 @@ function CartScreen() {
                         <i className="fas fa-plus-circle" />
                       </Button>
                     </Col>
-                    <Col md={3}>{item.price}</Col>
+                    <Col md={3}>{item.price}$</Col>
                     <Col md={2}>
                       <Button
                         onClick={() => removeItemHandler(item)}
@@ -109,7 +110,11 @@ function CartScreen() {
                       type="button"
                       variant="primary"
                       disabled={cartItems.length === 0}
-                      onClick={() => navigate('/signIn?redirect=/shopping')}
+                      onClick={() =>
+                        userInfo
+                          ? navigate('/shipping')
+                          : navigate('/signIn?redirect=/shipping')
+                      }
                     >
                       Proceed to Checkout
                     </Button>

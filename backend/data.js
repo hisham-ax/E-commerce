@@ -1,7 +1,52 @@
+import bcrypt from 'bcryptjs';
 const data = {
+  users: [
+    {
+      name: 'Hisham',
+      email: 'hisham4a4d4m@gmail.com',
+      password: bcrypt.hashSync('76895508*'),
+      isAdmin: true,
+    },
+    {
+      name: 'Mohamed',
+      email: 'mohamed4a4d4m@gmail.com',
+      password: bcrypt.hashSync('12345678*'),
+      isAdmin: false,
+    },
+    {
+      name: 'Aya',
+      email: 'aya4a4d4m@gmail.com',
+      password: bcrypt.hashSync('76895508'),
+      isAdmin: false,
+    },
+    {
+      name: 'Doaa',
+      email: 'doaa4a4d4m@gmail.com',
+      password: bcrypt.hashSync('76895508'),
+      isAdmin: false,
+    },
+    {
+      name: 'Amora',
+      email: 'amora4a4d4m@gmail.com',
+      password: bcrypt.hashSync('76895508'),
+      isAdmin: false,
+    },
+    {
+      name: 'Abdelrahman',
+      email: 'abdelrahman4a4d4m@gmail.com',
+      password: bcrypt.hashSync('76895508'),
+      isAdmin: false,
+    },
+    {
+      name: 'Emad',
+      email: 'emad4a4d4m@gmail.com',
+      password: bcrypt.hashSync('76895508'),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
-      _id: '1',
+      // _id: '1',
       name: 'Nike Slim shirt',
       slug: 'nike-slim-shirt',
       catigory: 'Shirts',
@@ -14,7 +59,7 @@ const data = {
       discreption: 'high quality product',
     },
     {
-      _id: '2',
+      // _id: '2',
       name: 'Adidas Fit shirt',
       slug: 'adidas-fit-shirt',
       catigory: 'Shirts',
@@ -27,7 +72,7 @@ const data = {
       discreption: 'high quality product',
     },
     {
-      _id: '3',
+      // _id: '3',
       name: 'Nike Slim Pant',
       slug: 'nike-slim-pant',
       catigory: 'Pants',
@@ -40,13 +85,13 @@ const data = {
       discreption: 'high quality product',
     },
     {
-      _id: '4',
+      // _id: '4',
       name: 'Adidas Slim Pant',
       slug: 'adidas-slim-pant',
       catigory: 'Pants',
       image: '/images/p4.jpg',
       price: 65,
-      countInStock: 0,
+      countInStock: 10,
       brand: 'Adidas',
       rating: 4.5,
       numReviews: 10,

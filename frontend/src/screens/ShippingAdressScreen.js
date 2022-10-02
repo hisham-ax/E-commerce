@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/esm/Button';
 import Form from 'react-bootstrap/Form';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
+import CheckoutSteps from '../components/checkoutSteps';
 
 function ShippingAdressScreen() {
   const { state, dispatch: cxtDispatch } = useContext(Store);
@@ -52,6 +53,7 @@ function ShippingAdressScreen() {
       <Helmet>
         <title>Shipping Adress</title>
       </Helmet>
+      <CheckoutSteps />
       <div className="container small-container">
         <h1 className="my-3">Shipping Adress</h1>
         <Form onSubmit={SubmitHandler}>
